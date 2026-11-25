@@ -1,0 +1,53 @@
+'''zadanie 1 '''
+
+create table CLIENT as
+select * from company_2025.CLIENT;
+
+create table EMPLOYEE as
+select * from company_2025.EMPLOYEE;
+
+create table `ORDER` as
+select * from company_2025.ORDER;
+
+SELECT * FROM `ORDER`;
+
+SELECT * FROM `ORDER`
+WHERE ORDER_STATUS = 5;
+
+SELECT ORDER_ID, ORDER_STATUS FROM `ORDER`
+WHERE CLIENT_ID IN (1, 3, 5);
+
+'''zadanie 2 '''
+
+SELECT * FROM EMPLOYEE
+WHERE FIRST_NAME = 'Agnieszka' AND pensja = 3900;
+
+SELECT * 
+FROM EMPLOYEE
+WHERE pensja between 5000 AND 7000;
+
+SELECT * 
+FROM CLIENT 
+WHERE IS_COMPANY = 1 AND FULL_NAME LIKE '%eco%';
+
+'''zadanie 3''' 
+SELECT * 
+FROM `ORDER`
+WHERE MONTH(ORDER_DATE) = 06 OR MONTH(ORDER_DATE) = 07; 
+
+SELECT * 
+FROM CLIENT 
+WHERE TAX_IDENTIFIER IS NOT null order by SHORT_NAME;
+
+SELECT * 
+FROM EMPLOYEE
+WHERE BIRTH_DATE 
+ORDER BY BIRTH_DATE
+LIMIT 5;
+
+'''ZADANIE 4'''
+
+
+
+
+
